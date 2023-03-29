@@ -23,7 +23,7 @@ for i = 1:(n-1)
     row = row + 2;
     col = col + 4;
 end 
-X = B'/A';
+X = (A^-1)*B;
 
 splines = zeros(n - 1, 4);
 for i = 1:n-1
@@ -81,7 +81,7 @@ for m = 3:20
         row = row + 2;
         col = col + 4;
     end 
-    X = B'/A';
+    X = (A^-1)*B;
     
     splines = zeros(n - 1, 4);
     for i = 1:n-1
